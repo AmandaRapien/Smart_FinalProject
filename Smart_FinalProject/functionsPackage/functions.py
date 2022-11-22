@@ -6,4 +6,4 @@ Created on Nov 22, 2022
 text = open("english.txt")
 
 
-text.replace('\n', ',')
+text.
