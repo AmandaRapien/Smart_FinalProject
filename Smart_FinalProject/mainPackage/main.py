@@ -9,3 +9,11 @@ decrypt a file and display a photo.
 Citations:
 Anything else that's relevant:
 '''
+import os 
+
+import os
+print("Working dir:", os.getcwd())
+text = open("english.txt")
+
+
+text.replace('\n', ',')
