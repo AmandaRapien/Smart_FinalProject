@@ -8,8 +8,13 @@ Brief Description: This project demonstrates that we can
 decrypt a file and display a photo.
 Citations:
 Anything else that's relevant:
-'''
-import os 
+''' 
 from functionsPackage.functions import *
 
 decode('english.txt','EncryptedGroupHints.json' )
+
+
+# Load image 
+teamimage = load_image('ourteam.jpeg')
+
+#teamimage.show()

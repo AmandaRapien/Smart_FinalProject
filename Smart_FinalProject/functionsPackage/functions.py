@@ -9,7 +9,8 @@ decrypt a file and display a photo.
 Citations:
 Anything else that's relevant:
 '''
-import os, json
+import json
+from PIL import Image
 
 def decode(english, enchints):
     # Open the english file
@@ -28,7 +29,13 @@ def decode(english, enchints):
     for sub in readText:
         formattedText.append(sub.replace("\n", ""))
     decodedHint = ''
+    # Loop to create string of decoded hint
     for num in smartJson:
         decodedHint += f"{formattedText[int(num)]} "        
     print(decodedHint)
 
+
+def load_image( filename ) :
+    myimage = Image.open(filename)
+    myimage.load()
+    return myimage.show()
