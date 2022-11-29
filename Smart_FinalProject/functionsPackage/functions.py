@@ -11,27 +11,24 @@ Anything else that's relevant:
 '''
 import os, json
 
+def decode(english, enchints):
+    # Open the english file
+    englishText = open(english,'r')
+    # Open the hints file 
+    hints = open(enchints)
+    # Read the txt file
+    readText = englishText.readlines()
+    # Parse hints JSON
+    parsed_json = json.load(hints)
+    # Narrow JSON down to smart array
+    smartJson = (parsed_json['Smart'])
+    # Initialize array variable for formatted text
+    formattedText = []
+    # loop to replace new line character in txt file
+    for sub in readText:
+        formattedText.append(sub.replace("\n", ""))
+    decodedHint = ''
+    for num in smartJson:
+        decodedHint += f"{formattedText[int(num)]} "        
+    print(decodedHint)
 
-f = open('english.txt','r')
-test = open('EncryptedGroupHints.json')
-file = f.readlines()
-
-print(file)
-
-#file.replace('\n','')
-
-
-
-parsed_json = json.load(test)
-
-print(parsed_json)
-json = (parsed_json['Smart'])
-for num in json:
-    print(file[int(num)])
-
-'''
-text = []
-for item in file:
-        print(json[int(item)])
-print(text)
-'''
