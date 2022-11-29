@@ -10,4 +10,6 @@ Citations:
 Anything else that's relevant:
 '''
 import os 
+from functionsPackage.functions import *
 
+decode('english.txt','EncryptedGroupHints.json' )
